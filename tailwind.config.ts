@@ -8,9 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      background: {
+        'hero-desktop':
+          "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../public/collection.jpg')",
+      },
       backgroundImage: {
-        'hero-desktop': "url('../public/collection.jpg')",
+        'hero-desktop':
+          "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('../public/collection.jpg')",
         'hero-mobile': "url('../public/collection-mobile.jpg')",
+        'gradient-linear': 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

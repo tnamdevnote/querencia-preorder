@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat, DM_Sans } from 'next/font/google'
 import './globals.css'
+import Icon from './components/components/Icons/Icon'
 
 export const metadata: Metadata = {
   title: 'Querencia Pre-order',
@@ -25,11 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${dm_sans.variable}`}>
       <body className="relative flex flex-col items-center">
-        <header className="fixed flex w-full max-w-screen-xl justify-between">
-          <div>Logo</div>
+        <header className="fixed flex w-full max-w-screen-xl justify-between p-8 md:p-16">
+          <div className="">
+            <Icon name="Logo" />
+          </div>
           <nav>
-            <ul className="flex" role="menu">
-              <li>Product Details</li>
+            <ul
+              className="flex gap-4 font-headings text-md text-light-gray"
+              role="menu"
+            >
+              <li>About</li>
               <li>FAQ</li>
               <li>Contact</li>
             </ul>
