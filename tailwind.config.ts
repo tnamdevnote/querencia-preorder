@@ -8,14 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      background: {
-        'hero-desktop':
-          "linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../public/collection.jpg')",
+      animation: {
+        bottomIn: 'bottomIn 1s ease-in-out ',
+        fadeIn: 'fadeIn 1s ease-in-out ',
+      },
+      keyframes: {
+        fadeIn: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        bottomIn: {
+          from: { opacity: '0', transform: 'translateY(10px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       backgroundImage: {
         'hero-desktop':
           "linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('../public/collection.jpg')",
-        'hero-mobile': "url('../public/collection-mobile.jpg')",
         'gradient-linear': 'linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
