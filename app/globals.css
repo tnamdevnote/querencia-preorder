@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-headings;
+  }
   h1 {
     @apply text-4xl;
   }
@@ -22,7 +30,7 @@
     @apply text-sm;
   }
   button {
-    @apply border-none font-body cursor-pointer bg-none;
+    @apply cursor-pointer border-none bg-none font-body;
   }
 }
 
@@ -32,7 +40,15 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-body {
+* {
+  min-width: 0;
+}
+
+img,
+video,
+iframe {
+  max-inline-size: 100%;
+  block-size: auto;
 }
 
 @layer utilities {
